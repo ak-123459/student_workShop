@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_Activity.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="628dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00E6E6FA"
+            app:srcCompat="@drawable/left_arrow">
+
+        </ImageButton>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="RtlSymmetry">
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/image_bg"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/student_icon">
+
+            </ImageView>
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:text="@string/hello"
+            android:textColor="@color/Brown"
+            android:textSize="25sp"
+
+            android:textStyle="bold">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+    </LinearLayout>
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/workShop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/backgroun_workshop"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1">
+
+
+
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha=".7"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:text="@string/your_workshop"
+                android:textColor="@color/Indigo"
+                android:textStyle="bold">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:layout_height="wrap_content">
+
+
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+
+                    android:padding="2dp"
+                    android:src="@drawable/arrow_narrow_right_svgrepo_com">
+
+                </ImageView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Show_All_workshop_text"
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="end"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:text=" See All Available Workshop"
+                android:textSize="12sp"
+                android:textStyle="bold">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".6dp"
+                android:layout_marginTop="10dp"
+                android:alpha=".9"
+                android:background="#B0000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingTop="10dp">
+
+            </Space>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/no_workShop_added"
+                android:visibility="gone"
+                android:text="@string/there_is_no_workshop_availble"
+                android:textColor="@color/Red"
+                android:textSize="17sp">
+
+            </TextView>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/Your_workShop_list"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

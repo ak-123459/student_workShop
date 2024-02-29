@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments_class.Login_fragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".LoginActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/topRow"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/white"
+            android:padding="5dp">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_your_account"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:paddingStart="10dp"
+                    android:layout_centerVertical="true"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <TextView
+                    android:id="@+id/Text1"
+                    android:layout_below="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_your_account_to_start_your_journey"
+                    android:textSize="10sp"
+                    android:alpha=".8"
+                    android:textStyle="bold"
+                    android:paddingStart="12dp"
+                    android:layout_centerVertical="true"
+                    tools:ignore="RtlSymmetry,SmallSp" />
+
+
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/skipButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:text="@string/skip"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:elevation="5dp"
+                android:background="@drawable/login_btn_bg"/>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/imageBox"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@android:color/white"
+            android:layout_below="@id/topRow"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/loginAnimationImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/registeranmination"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/loginBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_below="@id/imageBox">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTextfield"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/imageBox"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                tools:ignore="NotSibling">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/UserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailtextField"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/nameTextfield"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                tools:ignore="NotSibling">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordfield"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/emailtextField"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:hint="Password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Password"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    app:passwordToggleEnabled="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/regsiterBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passwordfield"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Register"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="@drawable/login_btn_bg"
+                android:elevation="5dp"
+                android:backgroundTint="#007DFE"/>
+
+
+
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

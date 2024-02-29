@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">student_workShop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="there_is_no_workshop_availble">You have No WorkShop</string>
+    <string name="your_workshop">Your WorkShop</string>
+    <string name="hello">Hello!</string>
+    <string name="Login">Register</string>
+    <string name="skip">Skip</string>
+    <string name="create_your_account_to_start_your_journey">Create Your account to start your journey</string>
+    <string name="create_your_account">Create Your account</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="regsiter">Regsiter</string>
+    <string name="new_user">New_user</string>
+</resources>
+
+
