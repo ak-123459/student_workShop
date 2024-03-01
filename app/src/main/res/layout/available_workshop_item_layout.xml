@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:id="@+id/parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-
-
+    <!-- Outer LinearLayout (Parent) -->
     <com.google.android.material.card.MaterialCardView
         android:padding="10dp"
         android:layout_margin="10dp"
@@ -16,65 +15,54 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
 
+        <!-- Inner LinearLayout (Child) -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:layout_height="wrap_content">
 
-
+            <!-- Nested LinearLayoutCompat -->
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_gravity="top"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content">
 
-
-
+                <!-- TextView for Course Details -->
                 <androidx.appcompat.widget.AppCompatTextView
                     android:text="Full Stack web development"
-                    android:id="@+id/Show_course_name"
+                    android:id="@+id/Course_details"
                     android:layout_width="200dp"
-                    android:textSize="12sp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:textSize="14sp"
                     android:alpha=".8"
                     android:textStyle="bold"
-                    android:layout_height="wrap_content">
-
+                    android:layout_height="50dp">
                 </androidx.appcompat.widget.AppCompatTextView>
-
-
-
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-
-
-
-
         </LinearLayout>
+
+        <!-- Apply Button -->
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="100dp"
             android:id="@+id/applybtn"
             android:layout_gravity="end"
-            android:layout_marginTop="35dp"
-            android:text="Added"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Apply"
             android:layout_marginEnd="25dp"
-            android:textColor="@color/DarkSlateGray"
-            android:background="#209F9595"
-            android:layout_height="30dp">
-
+            android:textColor="@color/White"
+            android:background="@drawable/login_btn_bg"
+            android:layout_height="40dp">
         </androidx.appcompat.widget.AppCompatButton>
 
-
-
     </com.google.android.material.card.MaterialCardView>
-
-
-
-
 
 </LinearLayout>

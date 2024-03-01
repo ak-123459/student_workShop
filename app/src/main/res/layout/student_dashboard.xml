@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Main_Activity.MainActivity">
 
+    <!-- Top LinearLayout containing ImageButton for navigation -->
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -23,6 +24,8 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlSymmetry">
 
+        <!-- Back Button -  But this image back Button Is InActive -->
+
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +35,11 @@
         </ImageButton>
 
 
+
     </LinearLayout>
+
+
+    <!-- LinearLayout for user greeting -->
 
 
     <LinearLayout
@@ -50,10 +57,16 @@
         tools:ignore="RtlSymmetry">
 
 
+        <!-- FrameLayout containing user image -->
+
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="0dp">
+
+
+            <!-- ImageView for user image -->
+
 
             <ImageView
                 android:layout_width="50dp"
@@ -67,6 +80,7 @@
             </ImageView>
         </FrameLayout>
 
+        <!-- TextView for user greeting -->
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -86,6 +100,7 @@
     </LinearLayout>
 
 
+    <!-- LinearLayout for the workshop section -->
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -106,6 +121,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout1">
 
+        <!-- LinearLayout for the workshop header -->
 
 
 
@@ -117,12 +133,14 @@
             android:orientation="vertical"
             android:padding="10dp">
 
+            <!-- LinearLayout for the "See All" link -->
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <!-- TextView for the workshop header -->
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -134,6 +152,7 @@
                 android:textColor="@color/Indigo"
                 android:textStyle="bold">
 
+
             </androidx.appcompat.widget.AppCompatTextView>
 
                 <LinearLayout
@@ -143,6 +162,7 @@
                     android:layout_height="wrap_content">
 
 
+                    <!-- ImageView for the right arrow -->
 
 
                 <ImageView
@@ -154,6 +174,10 @@
                     android:src="@drawable/arrow_narrow_right_svgrepo_com">
 
                 </ImageView>
+
+                    <!-- TextView for the "See All" link -->
+
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/Show_All_workshop_text"
                 android:layout_width="wrap_content"
@@ -173,7 +197,11 @@
 
                 </LinearLayout>
 
+
+
+
             </LinearLayout>
+            <!-- View for the separator line -->
 
             <View
                 android:layout_width="match_parent"
@@ -181,6 +209,7 @@
                 android:layout_marginTop="10dp"
                 android:alpha=".9"
                 android:background="#B0000000" />
+            <!-- Space for padding -->
 
             <Space
                 android:layout_width="wrap_content"
@@ -189,6 +218,9 @@
                 android:paddingTop="10dp">
 
             </Space>
+
+
+            <!-- TextView for displaying a message when no workshop is available -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -209,6 +241,7 @@
                 android:layout_height="match_parent">
 
 
+                <!-- ListView for displaying the workshop list -->
 
             <ListView
                 android:layout_width="match_parent"

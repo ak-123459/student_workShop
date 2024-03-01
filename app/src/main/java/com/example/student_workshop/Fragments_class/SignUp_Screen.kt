@@ -13,7 +13,10 @@ import com.example.student_workshop.R
 import com.example.student_workshop.Shared_Prefrences.WorkShopShared_Prefrence
 
 
-class RegsiterFragments : Fragment() {
+
+// Note --> This RegsiterFragment class working like Login_fragment class so you can understand its function definition on it
+
+class SignUp_Screen : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,14 +25,19 @@ class RegsiterFragments : Fragment() {
 
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_regsiter_fragments, container, false)
+        val view = inflater.inflate(R.layout.signup_screen, container, false)
 
+
+//         here find all the view id for click event ----------------------
         val regsiter_btn = view.findViewById<AppCompatButton>(R.id.regsiterBtn)
+
+        //         here click listener on Register Btn click ------------------
 
         regsiter_btn.setOnClickListener {
 
@@ -45,6 +53,8 @@ class RegsiterFragments : Fragment() {
 
 
 
+    // you can see the Login_fragment class in Fragment_class Module where i describe about this function working
+
     @SuppressLint("SuspiciousIndentation")
     private fun loadNewFragment() {
         val newFragment = Login_fragment()
@@ -56,6 +66,7 @@ class RegsiterFragments : Fragment() {
 
 
 
+    // you can see the Login_fragment class in Fragment_class Module where i describe about this function working
 
     private fun removeFragment() {
 
@@ -73,11 +84,11 @@ class RegsiterFragments : Fragment() {
 
 
 
-
+    // you can see the Login_fragment class in Fragment_class Module where i describe about this function working
 
     @SuppressLint("SuspiciousIndentation")
     private fun loadNewFragment1() {
-        val newFragment = All_WorkShop_Avil()
+        val newFragment = AllAvailableWorkShop()
         requireFragmentManager().beginTransaction()
             .replace(R.id.Main_fragmet_container, newFragment,"All_Available_workshop")
             .commit()

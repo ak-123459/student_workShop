@@ -13,6 +13,10 @@
     <string name="login">Login</string>
     <string name="regsiter">Regsiter</string>
     <string name="new_user">New_user</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
 </resources>
 
 

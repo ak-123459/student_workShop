@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments_class.Login_fragment">
 
-
+    <!-- Outer RelativeLayout for the entire login fragment -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
         tools:context=".LoginActivity">
 
+        <!-- Top Row with Title and Skip Button -->
         <RelativeLayout
             android:id="@+id/topRow"
             android:layout_width="match_parent"
@@ -20,6 +22,7 @@
             android:background="@android:color/white"
             android:padding="5dp">
 
+            <!-- Title TextView -->
             <TextView
                 android:id="@+id/titleTextView"
                 android:layout_width="wrap_content"
@@ -29,6 +32,9 @@
                 android:textStyle="bold"
                 android:paddingStart="10dp"
                 android:layout_centerVertical="true"/>
+
+            <!-- Skip Button - But Skip Button Is InActive -->
+
 
             <Button
                 android:id="@+id/skipButton"
@@ -45,6 +51,7 @@
                 android:background="@drawable/login_btn_bg"/>
         </RelativeLayout>
 
+        <!-- Image Box with Login Animation -->
         <FrameLayout
             android:id="@+id/imageBox"
             android:layout_width="match_parent"
@@ -53,6 +60,7 @@
             android:layout_below="@id/topRow"
             android:layout_marginTop="10dp">
 
+            <!-- Login Animation ImageView -->
             <ImageView
                 android:id="@+id/loginAnimationImageView"
                 android:layout_width="match_parent"
@@ -61,6 +69,7 @@
                 android:src="@drawable/loginanimination"/>
         </FrameLayout>
 
+        <!-- Login Box with Email, Password, and Login Button -->
         <RelativeLayout
             android:id="@+id/loginBox"
             android:layout_width="match_parent"
@@ -69,6 +78,7 @@
             android:background="@color/white"
             android:layout_below="@id/imageBox">
 
+            <!-- Email TextInputLayout and EditText -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailtextField"
                 android:layout_width="match_parent"
@@ -80,14 +90,13 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/EmailField"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
+            <!-- Password TextInputLayout and EditText with password toggle -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/passwordfield"
                 android:layout_width="match_parent"
@@ -98,7 +107,6 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/PasswordField"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -106,6 +114,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Login Button -->
             <Button
                 android:id="@+id/loginButton"
                 android:layout_width="200dp"
@@ -120,18 +129,16 @@
                 android:elevation="5dp"
                 android:backgroundTint="#007DFE"/>
 
-
-
+            <!-- New User Layout with Register TextViews -->
             <LinearLayout
                 android:layout_width="match_parent"
-
                 android:layout_marginTop="30dp"
                 android:id="@+id/New_User_Layout"
                 android:layout_below="@+id/loginButton"
                 android:gravity="center"
                 android:layout_height="wrap_content">
 
-
+                <!-- New User TextView -->
                 <TextView
                     android:id="@+id/New_user"
                     android:layout_width="wrap_content"
@@ -141,7 +148,7 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-
+                <!-- Register TextView -->
                 <TextView
                     android:id="@+id/RegsiterText"
                     android:layout_width="wrap_content"
@@ -155,9 +162,9 @@
                     android:textSize="17sp"
                     android:textStyle="bold" />
 
-
             </LinearLayout>
 
+            <!-- Forgot Password Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/myTextButton"
                 android:layout_below="@+id/New_User_Layout"
@@ -170,9 +177,6 @@
                 android:layout_height="wrap_content"
                 android:text="Forgot password?" />
 
-
-
         </RelativeLayout>
-</RelativeLayout>
-
+    </RelativeLayout>
 </FrameLayout>
